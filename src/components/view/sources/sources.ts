@@ -8,9 +8,9 @@ export interface NewsSource {
 class Sources {
     public draw(data: NewsSource[]): void {
         const fragment = document.createDocumentFragment();
-        
+
         const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement | null;
-        
+
         if (!sourceItemTemp) {
             return;
         }
@@ -28,7 +28,7 @@ class Sources {
 
             fragment.append(sourceClone);
         });
-        
+
         const sourcesContainer = document.querySelector<HTMLElement>('.sources');
         if (sourcesContainer) {
             sourcesContainer.append(fragment);
